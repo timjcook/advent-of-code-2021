@@ -56,15 +56,3 @@ class DepthTracker
     (index..([index + window_size - 1, input.length - 1].min))
   end
 end
-
-reader = InputReader.new(filename: 'inputs/day-1.txt')
-
-tracker1 = DepthTracker.new(window_size: 1)
-tracker1.analyze(input: reader.lines_as_ints)
-
-puts "Number of depth increases: #{tracker1.depth_increases}\n"
-
-tracker3 = DepthTracker.new(window_size: 3)
-tracker3.analyze(input: reader.lines_as_ints)
-
-puts "Number of depth increases: #{tracker3.depth_increases}\n"

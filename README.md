@@ -5,3 +5,6 @@ The aim of this year is to tackle each days puzzle using ruby and the given exam
 ## Day 1 - Depth Tracking
 Unfortunately this puzzle was started on the 1st but due to the busyness of life has taken me until the 12th to get back to. My first pass was to write a basic method that iterated through the input and counted when the depth had increased based on the previous depth. The issues with these approaches are often that if in your loop you are referencing the main array of inputs, you have to add guards to make sure you don't access an index outside the range.
 I took on the second task by refactoring what I had to use the window approach and get it working for a window size of 1. I iterated through the inputs and returned a list of depths for each window size, and then did the basic iteration and increase count from the first problem. It was then just a matter of increasing the window size to 3 to get the final result.
+
+## Day 2 - Plotting a Course
+Smooth sailing on this one. I really like using OpenStruct so that I can access named properties like methods. I also don't like destroying the answers for part 1 so I created a new class that inherited from the original plotting class and refactored so part 2 involved just overriding the instruction methods, super nice!
