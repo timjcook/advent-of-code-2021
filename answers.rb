@@ -1,6 +1,7 @@
 require_relative 'input_reader'
 require_relative 'depth_tracker'
 require_relative 'position_plotter'
+require_relative 'binary_reader'
 
 def heading(day:)
   puts "===========================================\n"
@@ -45,3 +46,24 @@ puts "Horizontal position: #{position.horizontal_position}"
 puts "Depth: #{position.depth}"
 
 puts "Product: #{position.depth * position.horizontal_position}\n\n"
+
+## Day 3
+
+heading day: 3
+
+reader = InputReader.new(filename: 'inputs/day-3.txt')
+
+binary_reader = BinaryReader.new
+gamma = binary_reader.gamma_rate(input: reader.lines)
+epsilon = binary_reader.epsilon_rate(input: reader.lines)
+power_consumption = binary_reader.power_consumption(input: reader.lines)
+oxygen_generator_rating = binary_reader.oxygen_generator_rating(input: reader.lines)
+co2_scrubber_rating = binary_reader.co2_scrubber_rating(input: reader.lines)
+life_support_rating = binary_reader.life_support_rating(input: reader.lines)
+
+puts "Gamma rate: #{gamma}"
+puts "Epsilon rate: #{epsilon}"
+puts "Power consumption: #{power_consumption}\n\n"
+puts "Oxygen generator rating: #{oxygen_generator_rating}"
+puts "CO2 scrubber rating: #{co2_scrubber_rating}"
+puts "Life support rating: #{life_support_rating}\n\n"

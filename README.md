@@ -8,3 +8,6 @@ I took on the second task by refactoring what I had to use the window approach a
 
 ## Day 2 - Plotting a Course
 Smooth sailing on this one. I really like using OpenStruct so that I can access named properties like methods. I also don't like destroying the answers for part 1 so I created a new class that inherited from the original plotting class and refactored so part 2 involved just overriding the instruction methods, super nice!
+
+## Day 3 - Building with bits
+Main challenge here was finding an abstraction that felt right. I over did the use of passing blocks initially and while a got a solution for part 1, when I had to reuse similar "common bit" logic for part 2 it was going to involve a bunch of copy pasting. I ended up passing a symbol of a instance method and calling send, not sure if that is a nice thing to do or not but it's what I wanted to do. In JS I would have just passed the function itself.
