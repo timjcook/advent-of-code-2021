@@ -11,3 +11,7 @@ Smooth sailing on this one. I really like using OpenStruct so that I can access 
 
 ## Day 3 - Building with bits
 Main challenge here was finding an abstraction that felt right. I over did the use of passing blocks initially and while a got a solution for part 1, when I had to reuse similar "common bit" logic for part 2 it was going to involve a bunch of copy pasting. I ended up passing a symbol of a instance method and calling send, not sure if that is a nice thing to do or not but it's what I wanted to do. In JS I would have just passed the function itself.
+
+## Day 4 - Bingo!
+Abstracting things into a BingoBoard class was pretty organic with this one. As the puzzle progressed I started marking the order of the numbers on each board as well as calculating the score for each board and noting if the board was winning or not.
+Doing the work in part 1 on the BingoBoard class meant that part 2 was a breeze, except that my initial logic for finding winning board vertically was wrong.

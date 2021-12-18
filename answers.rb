@@ -2,6 +2,7 @@ require_relative 'input_reader'
 require_relative 'depth_tracker'
 require_relative 'position_plotter'
 require_relative 'binary_reader'
+require_relative 'bingo_player'
 
 def heading(day:)
   puts "===========================================\n"
@@ -67,3 +68,22 @@ puts "Power consumption: #{power_consumption}\n\n"
 puts "Oxygen generator rating: #{oxygen_generator_rating}"
 puts "CO2 scrubber rating: #{co2_scrubber_rating}"
 puts "Life support rating: #{life_support_rating}\n\n"
+
+## Day 4
+
+heading day: 4
+
+reader = InputReader.new(filename: 'inputs/day-4.txt')
+bingo = BingoPlayer.new(game: reader.lines)
+
+bingo.play
+
+first_winning_board = bingo.winning_boards.first.board
+puts "Winning board:\n #{first_winning_board}\n"
+puts "Last sequence number: #{first_winning_board.last_marked_value}\n"
+puts "Total: #{first_winning_board.total}\n\n"
+
+last_winning_board = bingo.winning_boards.last.board
+puts "Winning board:\n #{last_winning_board}\n"
+puts "Last sequence number: #{last_winning_board.last_marked_value}\n"
+puts "Total: #{last_winning_board.total}\n"
