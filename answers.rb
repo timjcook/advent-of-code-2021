@@ -4,6 +4,7 @@ require_relative 'position_plotter'
 require_relative 'binary_reader'
 require_relative 'bingo_player'
 require_relative 'vent_mapper'
+require_relative 'fish_tracker'
 
 def heading(day:)
   puts "===========================================\n"
@@ -99,4 +100,16 @@ vent_mapper = VentMapper.new(fields: reader.lines)
 puts "Number of overlapping field (without diagonals): #{vent_mapper.num_overlapping_fields}\n"
 
 vent_mapper = VentMapper.new(fields: reader.lines, diagonal: true)
-puts "Number of overlapping field (with diagonals): #{vent_mapper.num_overlapping_fields}\n"
+puts "Number of overlapping field (with diagonals): #{vent_mapper.num_overlapping_fields}\n\n"
+
+## Day 6
+
+heading day: 6
+
+reader = InputReader.new(filename: 'inputs/day-6.txt')
+
+num_fish = School.num_fish(input: reader.lines.first, days: 80)
+puts "Number of fish (80 days): #{num_fish}\n"
+
+num_fish = School.num_fish(input: reader.lines.first, days: 256)
+puts "Number of fish (256 days): #{num_fish}\n\n"
