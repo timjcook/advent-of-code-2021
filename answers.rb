@@ -3,6 +3,7 @@ require_relative 'depth_tracker'
 require_relative 'position_plotter'
 require_relative 'binary_reader'
 require_relative 'bingo_player'
+require_relative 'vent_mapper'
 
 def heading(day:)
   puts "===========================================\n"
@@ -86,4 +87,16 @@ puts "Total: #{first_winning_board.total}\n\n"
 last_winning_board = bingo.winning_boards.last.board
 puts "Winning board:\n #{last_winning_board}\n"
 puts "Last sequence number: #{last_winning_board.last_marked_value}\n"
-puts "Total: #{last_winning_board.total}\n"
+puts "Total: #{last_winning_board.total}\n\n"
+
+## Day 5
+
+heading day: 5
+
+reader = InputReader.new(filename: 'inputs/day-5.txt')
+vent_mapper = VentMapper.new(fields: reader.lines)
+
+puts "Number of overlapping field (without diagonals): #{vent_mapper.num_overlapping_fields}\n"
+
+vent_mapper = VentMapper.new(fields: reader.lines, diagonal: true)
+puts "Number of overlapping field (with diagonals): #{vent_mapper.num_overlapping_fields}\n"
