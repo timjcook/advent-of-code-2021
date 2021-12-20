@@ -5,6 +5,7 @@ require_relative 'binary_reader'
 require_relative 'bingo_player'
 require_relative 'vent_mapper'
 require_relative 'fish_tracker'
+require_relative 'fuel_calculator'
 
 def heading(day:)
   puts "===========================================\n"
@@ -113,3 +114,15 @@ puts "Number of fish (80 days): #{num_fish}\n"
 
 num_fish = School.num_fish(input: reader.lines.first, days: 256)
 puts "Number of fish (256 days): #{num_fish}\n\n"
+
+## Day 7
+
+heading day: 7
+
+reader = InputReader.new(filename: 'inputs/day-7.txt')
+
+linear_result = FuelCalculator.optimal_position_for_linear_burn_rate input: reader.lines.first
+puts "Linear burn rate - Optimal position: #{linear_result.position}, Fuel usage: #{linear_result.fuel_usage}\n"
+
+increasing_result = FuelCalculator.optimal_position_for_increasing_burn_rate input: reader.lines.first
+puts "Increasing burn rate - Optimal position: #{increasing_result.position}, Fuel usage: #{increasing_result.fuel_usage}\n"
