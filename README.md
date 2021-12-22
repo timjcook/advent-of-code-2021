@@ -31,3 +31,6 @@ Thinking in terms of "fish I've seen before" was quite helpful however. I switch
 ## Day 7 - Crab fuel burn rate
 The logic behind this one was pretty straightforward. Main thing I thought about was how to structure my class so it could choose nicely between a linear burn rate or a "increasing" (terrible name but couldn't think of a better one) burn rate. I thought it was time for a lambda but then when part 2 had performance issues I opted for an instance method so I could keep a look-up.
 With look-up tables fresh in my mind the performance aspect of this wasn't a problem.
+
+## Day 8 - Deductive reasoning
+Wrote the most code yet for this one. Was hard to execute the deduction required for part two in a succinct way. Not super inpired objects used here, perhaps I'm getting a bit tired. I liked the different type of problem that we had to solve here although the actual solution was pretty manual and process-of-elimination.

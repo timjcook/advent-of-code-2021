@@ -6,6 +6,7 @@ require_relative 'bingo_player'
 require_relative 'vent_mapper'
 require_relative 'fish_tracker'
 require_relative 'fuel_calculator'
+require_relative 'segment_searcher'
 
 def heading(day:)
   puts "===========================================\n"
@@ -126,3 +127,15 @@ puts "Linear burn rate - Optimal position: #{linear_result.position}, Fuel usage
 
 increasing_result = FuelCalculator.optimal_position_for_increasing_burn_rate input: reader.lines.first
 puts "Increasing burn rate - Optimal position: #{increasing_result.position}, Fuel usage: #{increasing_result.fuel_usage}\n"
+
+## Day 8
+
+heading day: 8
+
+reader = InputReader.new(filename: 'inputs/day-8.txt')
+
+num_identified_outputs = SegmentSearcher.num_identified_outputs input: reader.lines
+puts "Num identified outputs: #{num_identified_outputs}\n"
+
+sum_output_values = SegmentSearcher.sum_output_values input: reader.lines
+puts "Sum output values: #{sum_output_values}\n\n"
