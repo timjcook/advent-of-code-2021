@@ -7,6 +7,7 @@ require_relative 'vent_mapper'
 require_relative 'fish_tracker'
 require_relative 'fuel_calculator'
 require_relative 'segment_searcher'
+require_relative 'lavaflow_monitor'
 
 def heading(day:)
   puts "===========================================\n"
@@ -139,3 +140,15 @@ puts "Num identified outputs: #{num_identified_outputs}\n"
 
 sum_output_values = SegmentSearcher.sum_output_values input: reader.lines
 puts "Sum output values: #{sum_output_values}\n\n"
+
+## Day 9
+
+heading day: 9
+
+reader = InputReader.new(filename: 'inputs/day-9.txt')
+
+risk_assessment = LavaflowMonitor.risk_assessment input: reader.lines
+puts "Risk assessment: #{risk_assessment}\n"
+
+basin_score = LavaflowMonitor.basin_score input: reader.lines
+puts "Basin score: #{basin_score}\n\n"

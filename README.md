@@ -34,3 +34,6 @@ With look-up tables fresh in my mind the performance aspect of this wasn't a pro
 
 ## Day 8 - Deductive reasoning
 Wrote the most code yet for this one. Was hard to execute the deduction required for part two in a succinct way. Not super inpired objects used here, perhaps I'm getting a bit tired. I liked the different type of problem that we had to solve here although the actual solution was pretty manual and process-of-elimination.
+
+## Day 9 - Find the basin
+Pretty happy with the feel of this object. I liked having methods that could take a point and find the adjacent points, filtering out any invalid ones. The individual parts weren't particularly difficult, had some issue with the recursive logic but switching to storing the points of a basin in a set rather than an array was a bit of a sneaky way to avoid having double ups in the array.
