@@ -8,6 +8,7 @@ require_relative 'fish_tracker'
 require_relative 'fuel_calculator'
 require_relative 'segment_searcher'
 require_relative 'lavaflow_monitor'
+require_relative 'syntax_linter'
 
 def heading(day:)
   puts "===========================================\n"
@@ -152,3 +153,15 @@ puts "Risk assessment: #{risk_assessment}\n"
 
 basin_score = LavaflowMonitor.basin_score input: reader.lines
 puts "Basin score: #{basin_score}\n\n"
+
+## Day 10
+
+heading day: 10
+
+reader = InputReader.new(filename: 'inputs/day-10.txt')
+
+illegal_close_score = SyntaxLinter.illegal_close_score lines: reader.lines
+puts "Illegal Close Score: #{illegal_close_score}\n"
+
+autocomplete_score = SyntaxLinter.autocomplete_score lines: reader.lines
+puts "Autocomplete Score: #{autocomplete_score}\n"

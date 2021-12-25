@@ -37,3 +37,6 @@ Wrote the most code yet for this one. Was hard to execute the deduction required
 
 ## Day 9 - Find the basin
 Pretty happy with the feel of this object. I liked having methods that could take a point and find the adjacent points, filtering out any invalid ones. The individual parts weren't particularly difficult, had some issue with the recursive logic but switching to storing the points of a basin in a set rather than an array was a bit of a sneaky way to avoid having double ups in the array.
+
+## Day 10 - Keeping track of the syntax
+I did the work I usually would to approach this task in an OO-like fashion and it paid off. I already had a stack of the required chars that would complete the line and so when Part 2 came around it was pretty easy. +1 to objects.
