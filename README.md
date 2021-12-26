@@ -40,3 +40,6 @@ Pretty happy with the feel of this object. I liked having methods that could tak
 
 ## Day 10 - Keeping track of the syntax
 I did the work I usually would to approach this task in an OO-like fashion and it paid off. I already had a stack of the required chars that would complete the line and so when Part 2 came around it was pretty easy. +1 to objects.
+
+## Day 11 - Dumbo Octopus
+Thought this would be a performance problem but it really wasn't. Needed to read the rules a few times to realise that when an octopus flashes it couldn't accrue more energy until the next step. Part 2 was actually a 2 min addition, that's a win.

@@ -9,6 +9,7 @@ require_relative 'fuel_calculator'
 require_relative 'segment_searcher'
 require_relative 'lavaflow_monitor'
 require_relative 'syntax_linter'
+require_relative 'octopus_counter'
 
 def heading(day:)
   puts "===========================================\n"
@@ -165,3 +166,15 @@ puts "Illegal Close Score: #{illegal_close_score}\n"
 
 autocomplete_score = SyntaxLinter.autocomplete_score lines: reader.lines
 puts "Autocomplete Score: #{autocomplete_score}\n"
+
+## Day 11
+
+heading day: 11
+
+reader = InputReader.new(filename: 'inputs/day-11.txt')
+
+flash_count = OctopusCounter.flash_count lines: reader.lines, steps: 100
+puts "Octopus Flash Count: #{flash_count}\n"
+
+sync_step = OctopusCounter.sync_step lines: reader.lines
+puts "Octopus Sync Step: #{sync_step}\n"
