@@ -43,3 +43,7 @@ I did the work I usually would to approach this task in an OO-like fashion and i
 
 ## Day 11 - Dumbo Octopus
 Thought this would be a performance problem but it really wasn't. Needed to read the rules a few times to realise that when an octopus flashes it couldn't accrue more energy until the next step. Part 2 was actually a 2 min addition, that's a win.
+
+## Day 12 - Crawling through the Caverns
+I was not as confident about this one, compared to all the previous tasks. I mapped things out as I usually would which helped get my head into the problem. I knew I wanted to recursively work through all the cavern permutations and after a bit of messing around I got the result, but the problem was I wasn't actually returning the result. I didn't end up finding a nice way, I kind of hoped to have it return via the original function (called recursively within) folding it up nicely into some array of cavern paths. In the end I passed an empty array down the recursive chain and said "if you get to the end, put it on the stack". Not very graceful but did the trick.
+Part 2 was a pretty easy modification although I was not confident it would work. Worked first time though! Took a while to run but eh.

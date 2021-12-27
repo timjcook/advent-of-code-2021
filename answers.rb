@@ -10,6 +10,7 @@ require_relative 'segment_searcher'
 require_relative 'lavaflow_monitor'
 require_relative 'syntax_linter'
 require_relative 'octopus_counter'
+require_relative 'cave_mapper'
 
 def heading(day:)
   puts "===========================================\n"
@@ -178,3 +179,15 @@ puts "Octopus Flash Count: #{flash_count}\n"
 
 sync_step = OctopusCounter.sync_step lines: reader.lines
 puts "Octopus Sync Step: #{sync_step}\n"
+
+## Day 12
+
+heading day: 12
+
+reader = InputReader.new(filename: 'inputs/day-12.txt')
+
+num_paths = CaveMapper.num_paths input: reader.lines
+puts "Num paths to the end (without small cave return): #{num_paths}\n"
+
+num_paths = CaveMapper.num_paths input: reader.lines, allow_small_cave_return: true
+puts "Num paths to the end (with small cave return): #{num_paths}\n"
